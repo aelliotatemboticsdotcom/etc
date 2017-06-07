@@ -1,0 +1,8 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: dnsmasq-resolvconf
+  namespace: kube-system
+data:
+  resolv.conf: |
+    nameserver 192.168.0.222

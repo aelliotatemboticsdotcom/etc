@@ -1,0 +1,14 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: busybox-curl
+  namespace: default
+spec:
+  containers:
+  - image: odise/busybox-curl
+    command:
+      - ping
+      - "10.10.18.123"
+    imagePullPolicy: IfNotPresent
+    name: busybox-curl
+  restartPolicy: Never
